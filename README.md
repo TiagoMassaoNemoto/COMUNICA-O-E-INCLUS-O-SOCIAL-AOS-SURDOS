@@ -1,6 +1,6 @@
 # COMUNICACAO-E-INCLUSAO-SOCIAL-AOS-SURDOS
-<br>Tecnologia voltada a deficientes auditivos</br>
-<br>Feito por:</br>
+<br>Tecnologia voltada a deficientes auditivos.</br>
+<br>Feito por:
 <br>CAIO EDUARDO NASCIMENTO DE ARAUJO
 <br>LAÍS LOBO TEIXEIRA
 <br>THIAGO CORREA DE OLIVEIRA
