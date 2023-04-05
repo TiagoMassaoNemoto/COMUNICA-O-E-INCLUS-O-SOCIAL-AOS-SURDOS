@@ -2,7 +2,7 @@
 Tecnologia voltada a deficientes auditivos
 <br>Feito por:</br>
 <br>CAIO EDUARDO NASCIMENTO DE ARAUJO
-<br>LAÍS LOBO TEIXEIRA</br>
-<br>THIAGO CORREA DE OLIVEIRA</br>
-<br>TIAGO MASSAO NEMOTO</br>
+<br>LAÍS LOBO TEIXEIRA
+<br>THIAGO CORREA DE OLIVEIRA
+<br>TIAGO MASSAO NEMOTO
 <br>YAN KAZUHIRO SASAMORI KAMO</br>
