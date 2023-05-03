@@ -6,11 +6,15 @@ from os import listdir, path
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_holistic = mp.solutions.holistic
-
+#pegando os nomes dos frames
 name_image = (i for i in listdir("C:\\Users\\timas\\Desktop\\Pratica\\Teste Frame"))
+#pegando nome do frame um por um
 for image in name_image:
+    #variavel com o frame
     img = cv2.imread("C:\\Users\\timas\\Desktop\\Pratica\\Teste Frame\\" + image)
+    #cor do background
     BG_COLOR = (192, 192, 192) # gray
+    #configurações mediapipe
     with mp_holistic.Holistic(
         static_image_mode=True,
         model_complexity=2,
@@ -52,4 +56,5 @@ for image in name_image:
         # Plot pose world landmarks.
         # mp_drawing.plot_landmarks(
         #     results.pose_world_landmarks, mp_holistic.POSE_CONNECTIONS)
+        #salvamento do frame com mediapipe implantado
         cv2.imwrite(image,annotated_image)
