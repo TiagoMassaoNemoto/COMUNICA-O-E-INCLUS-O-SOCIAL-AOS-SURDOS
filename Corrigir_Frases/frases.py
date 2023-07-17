@@ -20,16 +20,16 @@ def addPalavra(palavra):
     fraseCorrigida, expressoesIdentificadas = checarExpressoes(fraseCorrigida)
     fraseCorrigida = corrigirGeneros(manterExpressoes(fraseCorrigida, expressoesIdentificadas))
 
-    print(fraseCorrigida)
-    #rp = respostaPronta(fraseCorrigida)
+    #print(fraseCorrigida)
+    rp = respostaPronta(fraseCorrigida)
 
-    #if (rp != False):
-    #    print(rp)
-    #    palavras = []
-    #else:
-    #    cf = corrigirFrase(fraseCorrigida)
-    #    print(cf)
-    #    palavras = []
+    if (rp != False):
+        print(rp)
+        palavras = []
+    else:
+        cf = corrigirFrase(fraseCorrigida)
+        print(cf)
+        palavras = []
 
 addPalavra("cachorro")
 addPalavra("est@")

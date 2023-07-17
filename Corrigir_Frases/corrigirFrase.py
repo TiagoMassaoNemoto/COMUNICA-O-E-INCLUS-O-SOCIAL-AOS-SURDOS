@@ -89,11 +89,33 @@ def checarExpressoes(frase):
 def corrigirFrase(frase):
     fraseFinal = frase
     
+    tempo = identificarQuando(fraseFinal)
+
     #To do: Definir sujeito e predicado
-    #To do: Definir tempo verbal (presente, passado, futuro)
     #To do: Identificar plural
-    #To do: Add artigos e preposiçoes
+    
+    fraseFinal = correcao(tempo, cenario, objeto, sujeito, verbo, fraseFinal)
     
     addFrase(frase, fraseFinal)
 
     return fraseFinal
+
+def identificarQuando(frase):
+    if("amanhã" in frase):
+        return "futuro"
+    elif("ontem" in frase):
+        return "passado"
+    else:
+        return "presente"
+    
+def correcao(tempo, cenario, objeto, sujeito, verbo, frase):
+    #To do: Add artigos e preposiçoes
+    
+    #A lógica será melhor elaborada ainda
+
+    if(tempo == "passado"):
+        return frase.replace(verbo, conjugarVerbo(verbo, tempo))
+    elif(tempo == "futuro"):
+        return frase.replace(verbo, conjugarVerbo(verbo, tempo))
+    else:
+        return frase.replace(verbo, conjugarVerbo(verbo, tempo))
