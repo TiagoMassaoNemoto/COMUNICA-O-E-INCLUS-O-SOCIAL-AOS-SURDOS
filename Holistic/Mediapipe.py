@@ -11,10 +11,10 @@ custom_color_1 = (102, 22, 21)
 custom_color_2 = (21,22,102)
 
 #pegando os nomes dos frames
-name_image = (i for i in listdir("C:\\Users\\timas\\Desktop\\Pratica\\Teste Frame"))
+name_image = (i for i in listdir("C:\\Users\\Caioe\\Downloads\\COMUNICACAO-E-INCLUSAO-SOCIAL-AOS-SURDOS-main\\Frames"))
 #pegando um nome da lista
 for image in name_image:
-    img = cv2.imread("C:\\Users\\timas\\Desktop\\Pratica\\Teste Frame\\" + image)
+    img = cv2.imread("C:\\Users\\Caioe\\Downloads\\COMUNICACAO-E-INCLUSAO-SOCIAL-AOS-SURDOS-main\\Frames\\" + image)
     BG_COLOR = (192, 192, 192) # gray
     with mp_holistic.Holistic(
         static_image_mode=True,
@@ -46,71 +46,75 @@ for image in name_image:
         # Draw pose, left and right hands, and face landmarks on the image.
         
         #Configuração do Holistic e Hand na cor azul e vermelho
-        mp_drawing.draw_landmarks(
-            annotated_image,
-            results.face_landmarks,
-            mp_holistic.FACEMESH_TESSELATION,
-            #azul escuro
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+        if results.face_landmarks:
+            mp_drawing.draw_landmarks(
+                annotated_image,
+                results.face_landmarks,
+                mp_holistic.FACEMESH_TESSELATION,
+                # azul escuro
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
             )
-        mp_drawing.draw_landmarks(
-            annotated_image2,
-            results.face_landmarks,
-            mp_holistic.FACEMESH_TESSELATION,
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+            mp_drawing.draw_landmarks(
+                annotated_image2,
+                results.face_landmarks,
+                mp_holistic.FACEMESH_TESSELATION,
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
             )
-        
-        mp_drawing.draw_landmarks(
-            annotated_image,
-            results.pose_landmarks,
-            mp_holistic.POSE_CONNECTIONS,
-            #azul escuro
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+
+        if results.pose_landmarks:
+            mp_drawing.draw_landmarks(
+                annotated_image,
+                results.pose_landmarks,
+                mp_holistic.POSE_CONNECTIONS,
+                # azul escuro
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
             )
-        mp_drawing.draw_landmarks(
-            annotated_image2,
-            results.pose_landmarks,
-            mp_holistic.POSE_CONNECTIONS,
-            #vermelho escuro
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+            mp_drawing.draw_landmarks(
+                annotated_image2,
+                results.pose_landmarks,
+                mp_holistic.POSE_CONNECTIONS,
+                # vermelho escuro
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
             )
-        
-        mp_drawing.draw_landmarks(
-            annotated_image,
-            results.right_hand_landmarks,
-            mp_holistic.HAND_CONNECTIONS,
-            #azul escuro
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+
+        if results.right_hand_landmarks:
+            mp_drawing.draw_landmarks(
+                annotated_image,
+                results.right_hand_landmarks,
+                mp_holistic.HAND_CONNECTIONS,
+                # azul escuro
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
             )
-        mp_drawing.draw_landmarks(
-            annotated_image2,
-            results.right_hand_landmarks,
-            mp_holistic.HAND_CONNECTIONS,
-            #vermelho escuro
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+            mp_drawing.draw_landmarks(
+                annotated_image2,
+                results.right_hand_landmarks,
+                mp_holistic.HAND_CONNECTIONS,
+                # vermelho escuro
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
             )
-        
-        mp_drawing.draw_landmarks(
-            annotated_image,
-            results.left_hand_landmarks,
-            mp_holistic.HAND_CONNECTIONS,
-            #azul escuro
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+
+        if results.left_hand_landmarks:
+            mp_drawing.draw_landmarks(
+                annotated_image,
+                results.left_hand_landmarks,
+                mp_holistic.HAND_CONNECTIONS,
+                # azul escuro
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_1, thickness=2),
             )
-        mp_drawing.draw_landmarks(
-            annotated_image2,
-            results.left_hand_landmarks,
-            mp_holistic.HAND_CONNECTIONS,
-            #vermelho escuro
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
-            mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+            mp_drawing.draw_landmarks(
+                annotated_image2,
+                results.left_hand_landmarks,
+                mp_holistic.HAND_CONNECTIONS,
+                # vermelho escuro
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
+                mp_drawing.DrawingSpec(color=custom_color_2, thickness=2),
             )
         # Plot pose world landmarks.
         # mp_drawing.plot_landmarks(
