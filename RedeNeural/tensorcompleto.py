@@ -3,30 +3,10 @@ import mediapipe as mp
 import numpy as np
 import tensorflow as tf
 
-# Carregue o modelo do TensorFlow feito no código redeneural
-model = tf.keras.models.load_model('C:\\Users\\Caioe\\Downloads\\COMUNICACAO-E-INCLUSAO-SOCIAL-AOS-SURDOS-main\\modelo_letras')  # Substitua pelo caminho correto do modelo
+# Carregue o modelo do TensorFlow feito no código redeneuralcompleto
+model = tf.keras.models.load_model('C:\\Users\\Caioe\\Downloads\\COMUNICACAO-E-INCLUSAO-SOCIAL-AOS-SURDOS-main\\modelo_letra_alfabeto')  # Substitua pelo caminho correto do modelo
 
-def classify_as_A(image):
-    # Pré-processar a imagem (exemplo simples de redimensionamento)
-    image = cv2.resize(image, (28, 28))  # Redimensione para o tamanho esperado pelo modelo
-
-    # Converta a imagem para escala de cinza, se necessárioq
-    if len(image.shape) == 3:
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    # Expanda as dimensões para se adequar ao modelo (adicionar dimensão do lote e canal)
-    image = image.reshape(1, 28, 28, 1)
-
-    # Classificar a imagem usando o modelo do TensorFlow
-    prediction = model.predict(image)
-    class_index = np.argmax(prediction[0])
-
-    # Defina as classes que você treinou no modelo
-    classes = ['A', 'C']
-
-    return classes[class_index]
-
-def classify_as_C(image):
+def classify_as_letter(image):
     # Pré-processar a imagem (exemplo simples de redimensionamento)
     image = cv2.resize(image, (28, 28))  # Redimensione para o tamanho esperado pelo modelo
 
@@ -41,12 +21,10 @@ def classify_as_C(image):
     prediction = model.predict(image)
     class_index = np.argmax(prediction[0])
 
-    # Defina as classes que você treinou no modelo
-    classes = ['A', 'C']
+    # Defina as classes que você treinou no modelo (todas as letras do alfabeto)
+    classes = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
     return classes[class_index]
-
-# Resto do código permanece inalterado...
 
 def main():
     # Inicialize a captura de vídeo da câmera
@@ -88,9 +66,8 @@ def main():
                 hand_image = frame[y_min:y_max, x_min:x_max]
 
                 # Classificar a imagem
-                class_predicted = classify_as_A(hand_image)  # Ou usar classify_as_C(hand_image) se desejar classificar como "C"
+                class_predicted = classify_as_letter(hand_image)
                 
-
                 # Exibir a classificação na imagem
                 cv2.putText(frame, class_predicted, (x_min, y_min), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
