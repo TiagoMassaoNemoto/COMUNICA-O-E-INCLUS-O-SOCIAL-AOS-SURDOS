@@ -18,7 +18,7 @@
 <a href="https://ai.google.dev/edge/mediapipe/solutions/guide?hl=pt-br" target="_blank" rel="noreferrer"> <img src="components\logo_mediapipe.png" alt="mediapipe" width="40" height="40"/> </a>
 
 <br>
-<h2>Feito por:</h2>
+<h2>Feito Por</h2>
 <a href="https://github.com/Caio0Edu" target="_blank" rel="noreferrer"> <img src="https://github.com/Caio0Edu.png" alt="Caio0Edu" width="60" height="60"/> </a>
 <a href="https://github.com/laisloboteixeira" target="_blank" rel="noreferrer"> <img src="https://github.com/laisloboteixeira.png" alt="laisloboteixeira" width="60" height="60"/> </a>
 <a href="https://github.com/ThiagoCOliv" target="_blank" rel="noreferrer"> <img src="https://github.com/ThiagoCOliv.png" alt="ThiagoCOliv" width="60" height="60"/> </a>
