@@ -19,8 +19,8 @@
 
 <br>
 <h2>Feito por:</h2>
-<a href="https://github.com/Caio0Edu" target="_blank" rel="noreferrer"> <img src="https://github.com/Caio0Edu.png" alt="Caio0Edu" width="40" height="40"/> </a>
-<a href="https://github.com/laisloboteixeira" target="_blank" rel="noreferrer"> <img src="https://github.com/laisloboteixeira.png" alt="laisloboteixeira" width="40" height="40"/> </a>
-<a href="https://github.com/ThiagoCOliv" target="_blank" rel="noreferrer"> <img src="https://github.com/ThiagoCOliv.png" alt="ThiagoCOliv" width="40" height="40"/> </a>
-<a href="https://github.com/TiagoMassaoNemoto" target="_blank" rel="noreferrer"> <img src="https://github.com/TiagoMassaoNemoto.png" alt="TiagoMassaoNemoto" width="40" height="40"/> </a>
-<a href="https://github.com/Kazuhiiro" target="_blank" rel="noreferrer"> <img src="https://github.com/Kazuhiiro.png" alt="Kazuhiiro" width="40" height="40"/> </a>
+<a href="https://github.com/Caio0Edu" target="_blank" rel="noreferrer"> <img src="https://github.com/Caio0Edu.png" alt="Caio0Edu" width="60" height="60"/> </a>
+<a href="https://github.com/laisloboteixeira" target="_blank" rel="noreferrer"> <img src="https://github.com/laisloboteixeira.png" alt="laisloboteixeira" width="60" height="60"/> </a>
+<a href="https://github.com/ThiagoCOliv" target="_blank" rel="noreferrer"> <img src="https://github.com/ThiagoCOliv.png" alt="ThiagoCOliv" width="60" height="60"/> </a>
+<a href="https://github.com/TiagoMassaoNemoto" target="_blank" rel="noreferrer"> <img src="https://github.com/TiagoMassaoNemoto.png" alt="TiagoMassaoNemoto" width="60" height="60"/> </a>
+<a href="https://github.com/Kazuhiiro" target="_blank" rel="noreferrer"> <img src="https://github.com/Kazuhiiro.png" alt="Kazuhiiro" width="60" height="60"/> </a>
